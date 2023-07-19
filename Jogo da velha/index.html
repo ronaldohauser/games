@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jogo do Galo</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<!-- Área de arrastar as peças de cruz -->
+	<div class="arrastar">
+		<div class="caixaArrastavel">
+			<div class="cruz" draggable="true" ondragstart="arrastar(event)" id="cruz1"></div>
+		</div>
+		<div class="caixaArrastavel">
+			<div class="cruz" draggable="true" ondragstart="arrastar(event)" id="cruz2"></div>
+		</div>
+		<div class="caixaArrastavel">
+			<div class="cruz" draggable="true" ondragstart="arrastar(event)" id="cruz3"></div>
+		</div>
+		<div class="caixaArrastavel">
+			<div class="cruz" draggable="true" ondragstart="arrastar(event)" id="cruz4"></div>
+		</div>
+		<div class="caixaArrastavel">
+			<div class="cruz" draggable="true" ondragstart="arrastar(event)" id="cruz5"></div>
+		</div>
+	</div>
+
+	<!-- Tabuleiro de jogo -->
+	<div class="tabuleiro">
+		<!-- Células de soltar peças -->
+		<div class="caixaSoltar" data-posicao="0" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></div>
+		<div class="caixaSoltar" data-posicao="1" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></div>
+		<div class="caixaSoltar" data-posicao="2" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></div>
+		<div class="caixaSoltar" data-posicao="3" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></div>
+		<div class="caixaSoltar" data-posicao="4" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></div>
+		<div class="caixaSoltar" data-posicao="5" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></div>
+		<div class="caixaSoltar" data-posicao="6" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></div>
+		<div class="caixaSoltar" data-posicao="7" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></div>
+		<div class="caixaSoltar" data-posicao="8" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></div>
+	</div>
+	
+	<!-- Área de arrastar as peças de círculo -->
+	<div class="arrastar">
+		<div class="caixaArrastavel">
+			<div class="circulo" draggable="true" ondragstart="arrastar(event)" id="circulo1"></div>
+		</div>
+		<div class="caixaArrastavel">
+			<div class="circulo" draggable="true" ondragstart="arrastar(event)" id="circulo2"></div>
+		</div>
+		<div class="caixaArrastavel">
+			<div class="circulo" draggable="true" ondragstart="arrastar(event)" id="circulo3"></div>
+		</div>
+		<div class="caixaArrastavel">
+			<div class="circulo" draggable="true" ondragstart="arrastar(event)" id="circulo4"></div>
+		</div>
+		<div class="caixaArrastavel">
+			<div class="circulo" draggable="true" ondragstart="arrastar(event)" id="circulo5"></div>
+		</div>
+	</div>
+
+	<!-- Botão de reiniciar o jogo -->
+	<button class="reiniciar" onClick="resetarJogo()">Reiniciar Jogo</button>
+
+	<script src="script.js"></script>
+</body>
+</html>

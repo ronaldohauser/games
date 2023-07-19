@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 100vh;
+	background: #000;
+	background: linear-gradient(45deg, #494c4f, #1e1a1b);
+}
+
+.tabuleiro {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	margin: 0 50px;
+}
+
+.caixaSoltar {
+	position: relative;
+	width: 140px;
+	height: 140px;
+	border-right: 4px solid #fff;
+	border-bottom: 4px solid #fff;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.caixaSoltar:nth-child(3),
+.caixaSoltar:nth-child(6),
+.caixaSoltar:nth-child(9) {
+	border-right: none;
+}
+
+.caixaSoltar:nth-child(7),
+.caixaSoltar:nth-child(8),
+.caixaSoltar:nth-child(9) {
+	border-bottom: none;
+}
+
+.caixaSoltar div {
+	pointer-events: none;
+	transform: scale(1.5);
+}
+
+.arrastar {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 420px;
+	width: 100px;
+	gap: 10px;
+	margin: 0 40px;
+	cursor: grab;
+}
+
+.arrastar .caixaArrastavel {
+	padding: 15px;
+	background: rgba(255,255,255,0.1);
+}
+
+.cruz {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.cruz::before {
+	content: '';
+	position: absolute;
+	width: 5px;
+	height: 100%;
+	background: #c61515;
+	transform: rotate(45deg);
+}
+
+.cruz::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 5px;
+	background: #c61515;
+	transform: rotate(45deg);
+}
+
+.circulo {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	border: 5px solid #503c9a;
+	border-radius: 50%;
+}
+
+.reiniciar {
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 10px 25px;
+	border: none;
+	background: #161616;
+	color: #fff;
+	font-size: 1.25em;
+	cursor: pointer;
+	outline: none;
+}
+
+.mensagem {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 20px;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 1.5em;
+	color: #000;
+}
