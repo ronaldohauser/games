@@ -1,38 +1,43 @@
-*
-{
+/* Estilos gerais */
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: monospace;
+	font-family: 'Tektur', cursive;
 }
-body 
-{
+
+/* Estilos do corpo da página */
+body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	background: #0a3c2f;
+	background: #FFEADD;
 }
-.container 
-{
+
+/* Estilos do contêiner principal */
+.container {
 	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	gap: 30px;
-	background: #0d614b;
+	background: #3AA6B9;
 	padding: 40px 60px;
+	border-radius: 25px;
 }
-h2 
-{
+
+/* Estilos do título */
+h2 {
 	font-size: 3em;
 	color: #fff;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 }
-.reset 
-{
+
+/* Estilos do botão "Recomeçar" */
+.recomecar {
 	padding: 15px 20px;
 	color: #267c65;
 	background: #fff;
@@ -42,14 +47,16 @@ h2
 	text-transform: uppercase;
 	cursor: pointer;
 	font-weight: 600;
+	border-radius: 25px;
 }
-.reset:focus 
-{
+
+.recomecar:focus {
 	color: #fff;
 	background: #267c65;
 }
-.game 
-{
+
+/* Estilos do contêiner do jogo */
+.jogo {
 	width: 430px;
 	height: 430px;
 	display: flex;
@@ -58,8 +65,9 @@ h2
 	transform-style: preserve-3d;
 	perspective: 500px;
 }
-.item 
-{
+
+/* Estilos das cartas */
+.item {
 	position: relative;
 	width: 100px;
 	height: 100px;
@@ -70,23 +78,24 @@ h2
 	background: #fff;
 	transform: rotateY(180deg);
 	transition: 0.25s;
+	border-radius: 25px;
 }
-.item.boxOpen 
-{
+
+.item.boxOpen {
 	transform: rotateY(0deg);
 }
-.item::after 
-{
+
+.item::after {
 	content: '';
 	position: absolute;
 	inset: 0;
-	background: #209d7b;
+	background: #C1ECE4;
 	transition: 0.25s;
 	transform: rotateY(0deg);
 	backface-visibility: hidden;
 }
-.boxOpen:after ,
-.boxMatch:after
-{
+
+.boxOpen:after,
+.boxMatch:after {
 	transform: rotateY(180deg);
 }
